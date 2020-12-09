@@ -20,24 +20,22 @@ def part1(input):
             valid+=1
     return valid	 
 
-#part1(input)
 
 
 def part2(input):
      valid =0 
      for n in input:
-         print(n) 
          e = n.split(' ') 
          a,b =[int(i) for i in e[0].split('-')] 
          if e[2][a-1] ==e[1][0] and e[2][b-1] ==e[1][0]:  
              continue 
          elif e[2][a-1] ==e[1][0] or e[2][b-1] ==e[1][0]: 
             valid+=1 
-            print('***VALID****')
          else: 
             continue 
                   
      return valid 
 
-
+print(part1(input))
+print(part2(input))
 
