@@ -35,7 +35,7 @@ print("passports valid part1:",passport())
 def passport_details():
     details = ''
     valid = 0
-    print(valid_passports)
+    #print(valid_passports)
     for i in valid_passports:
         if validate_details(i):
             valid+=1
@@ -107,10 +107,10 @@ def validate_hgt(hgt):
         return (59<=int(hgt[:-2])<=76)
 
 def validate_ecl(ecl):
-    return bool(re.search('[abgho][mlrzt][buynlh]',ecl))
+    return bool(re.search('amb|blu|brn|gry|grn|hzl|oth',ecl))
 
 def validate_pid(pid):
-    return bool(re.search('[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]',pid))
+    return bool(re.search('[0-9]{9}',pid))
 
 
 
